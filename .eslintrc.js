@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@next/next/recommended',
+  ],
   overrides: [
     {
       env: {
@@ -23,5 +27,10 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'warn',
+  },
+  settings: {
+    react: {
+      version: 'detect', // Automatycznie wykryj wersję React
+    },
   },
 };
