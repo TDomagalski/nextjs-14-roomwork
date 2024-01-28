@@ -18,6 +18,15 @@ module.exports = {
         sourceType: 'script',
       },
     },
+    // IGNORE FILES & FOLDERS
+    {
+      ignorePatterns: [
+        'package.json',
+        'package-lock.json',
+        'next.config.mjs',
+        'jsconfig.json',
+      ],
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
