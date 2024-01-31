@@ -1,4 +1,6 @@
+'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './navbar.module.scss';
 
 const NavLinks = [
@@ -9,6 +11,9 @@ const NavLinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isActive = (path) => path === pathname;
+
   return (
     <nav>
       <div className={styles.navbar}>
@@ -19,7 +24,12 @@ export default function Navbar() {
           {NavLinks.map((link) => {
             return (
               <li key={link.id}>
-                <Link href={link.path}>{link.name}</Link>
+                <Link
+                  href={link.path}
+                  className={isActive(link.path) ? styles.active : ''}
+                >
+                  {link.name}
+                </Link>
               </li>
             );
           })}
