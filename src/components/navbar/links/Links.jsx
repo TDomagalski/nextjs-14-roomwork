@@ -1,7 +1,8 @@
-import Link from 'next/link';
+import NavLink from './navLink/NavLink';
+import styles from './links.module.scss';
 
 export default function Links() {
-  const NavLinks = [
+  const links = [
     { id: 1, name: 'Home', path: '/' },
     { id: 2, name: 'Kwatery', path: '/kwatery' },
     { id: 3, name: 'Galeria', path: '/galeria' },
@@ -9,11 +10,9 @@ export default function Links() {
   ];
 
   return (
-    <div>
-      {NavLinks.map((link) => (
-        <Link href={link.path} key={link.id}>
-          {link.name}
-        </Link>
+    <div className={styles.links}>
+      {links.map((link) => (
+        <NavLink item={link} key={link.id} />
       ))}
     </div>
   );
