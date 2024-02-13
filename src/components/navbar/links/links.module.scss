@@ -3,3 +3,32 @@
   justify-content: center;
   gap: 10px;
 }
+
+.mobileLinks,
+.menuBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .mobileLinks {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    height: calc(100vh - 80px);
+    width: 50%;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+}
