@@ -19,13 +19,13 @@ RootLayout.propTypes = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body className={inter.className}>
         <div className="container">
           <nav>
             <Navbar />
           </nav>
-          {children}
+          <main>{children}</main>
           <footer>
             <Footer />
           </footer>
