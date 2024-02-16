@@ -2,6 +2,8 @@
 import NavLink from './navLink/NavLink';
 import styles from './links.module.scss';
 import { useState } from 'react';
+import { RiMenuAddFill } from 'react-icons/ri';
+import { IoMdClose } from 'react-icons/io';
 
 const links = [
   { id: 1, name: 'Home', path: '/' },
@@ -20,11 +22,19 @@ export default function Links() {
           <NavLink item={link} key={link.id} />
         ))}
       </div>
-      <button className={styles.menuBtn} onClick={() => setOpen(!open)}>
-        Menu
-      </button>
+      <div className={styles.hamburgerContainer}>
+        {open ? (
+          <button className={styles.menuBtn} onClick={() => setOpen(!open)}>
+            <IoMdClose width={50} height={50} />
+          </button>
+        ) : (
+          <button className={styles.menuBtn} onClick={() => setOpen(!open)}>
+            <RiMenuAddFill width={50} height={50} />
+          </button>
+        )}
+      </div>
       {open && (
-        <div className={styles.mobileLinks}>
+        <div className={`${styles.mobileLinks}  mobileLinks`}>
           {links.map((link) => (
             <NavLink item={link} key={link.id} />
           ))}
