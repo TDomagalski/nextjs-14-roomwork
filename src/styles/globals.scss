@@ -26,10 +26,18 @@ a {
   text-decoration: none;
 }
 
+nav {
+  padding: 0 25px;
+}
+
+main,
+footer {
+  padding: 25px;
+}
+
 .container {
   width: 100%;
   margin: auto;
-  padding: 0 25px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,6 +48,11 @@ a {
   body {
     background-color: $theme-dark-bg;
     color: $theme-light-text;
+  }
+
+  footer {
+    background-color: $theme-light-bg;
+    color: $theme-dark-text;
   }
 
   .active {
@@ -64,6 +77,11 @@ a {
   body {
     background-color: $theme-light-bg;
     color: $theme-dark-text;
+  }
+
+  footer {
+    background-color: $theme-dark-bg;
+    color: $theme-light-text;
   }
 
   .active {

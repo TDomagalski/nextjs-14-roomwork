@@ -1,17 +1,33 @@
-import Link from 'next/link';
 import styles from './navbar.module.scss';
+import { MdOutlineMarkEmailRead, MdPhoneForwarded } from 'react-icons/md';
 
 export default function Footer() {
   return (
     <div className={styles.container}>
-      <div className="companyContainer">
-        <div className="Info">
+      <div className={styles.companyContainer}>
+        <div className={styles.info}>
           <span>Family Party Sp. z o.o.</span>
+          <span>ul. Krakowska 62d</span>
+          <span>32-090 Słomniki</span>
+          <span>NIP: 682-177-77-38</span>
+          <span>REGON: 381101585</span>
+          <span></span>
         </div>
-        <div className="Btn">
-          <a href="tel:+48664939711">664-939-711</a>
+        <div className={styles.btns}>
+          <div className={styles.btnMail}>
+            <a href="mailto:kwatery@roomwork.pl">
+              <MdOutlineMarkEmailRead />
+              <span>kwatery@roomwork.pl</span>
+            </a>
+          </div>
+          <div className={styles.btnPhone}>
+            <a href="tel:+48664939711">
+              <MdPhoneForwarded />
+              <span>664-939-711</span>
+            </a>
+          </div>
         </div>
-        <div className="Map">
+        <div className={styles.map}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1276.087537913689!2d20.066550950482323!3d50.232634078022706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165313b56b455b%3A0xbee57c823b9b8a2d!2sRoomWork%20-%20Kwatery%20pracownicze%20do%20wynaj%C4%99cia!5e0!3m2!1spl!2spl!4v1708123492036!5m2!1spl!2spl"
             width="400"
@@ -22,11 +38,12 @@ export default function Footer() {
           ></iframe>
         </div>
       </div>
-      <div className="webDevContainer">
-        <div className="imgContainer">
+
+      <div className={styles.webDevContainer}>
+        <div className={styles.imgContainer}>
           <span>WebDev Img Cont</span>
         </div>
-        <div className="infoContainer">
+        <div className={styles.infoContainer}>
           <h1>WebDev Info Cont</h1>
         </div>
       </div>
