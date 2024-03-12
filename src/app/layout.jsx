@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Inter } from 'next/font/google';
+import { Inter, Roboto_Mono } from 'next/font/google';
 import '../styles/globals.scss';
 
 import Navbar from '@/components/navbar/Navbar';
@@ -22,7 +22,7 @@ RootLayout.propTypes = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <body className={inter.className}>
+      <body className={inter.variable}>
         <Providers>
           <div className="container">
             <nav>

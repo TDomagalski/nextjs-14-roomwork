@@ -50,11 +50,6 @@ footer {
     color: $theme-light-text;
   }
 
-  footer {
-    background-color: $theme-light-bg;
-    color: $theme-dark-text;
-  }
-
   .active {
     background-color: $theme-light-bg;
     color: $theme-dark-text;
@@ -71,17 +66,17 @@ footer {
       color: $theme-light-text;
     }
   }
+
+  footer {
+    background-color: $theme-darkLight-bg;
+    color: $theme-light-text;
+  }
 }
 
 [data-theme='light'] {
   body {
     background-color: $theme-light-bg;
     color: $theme-dark-text;
-  }
-
-  footer {
-    background-color: $theme-dark-bg;
-    color: $theme-light-text;
   }
 
   .active {
@@ -99,5 +94,10 @@ footer {
       background-color: $theme-light-bg;
       color: $theme-dark-text;
     }
+  }
+
+  footer {
+    background-color: $theme-dark-bg;
+    color: $theme-light-text;
   }
 }

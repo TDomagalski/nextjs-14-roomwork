@@ -1,5 +1,12 @@
 // Themes colors
 $theme-dark-bg: #2c3639;
+$theme-darkLight-bg: #3f4e4f;
 $theme-light-text: #f9f9f9;
 $theme-light-bg: #dcd7c9;
 $theme-dark-text: #010101;
+
+// Mediaqueries Breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;

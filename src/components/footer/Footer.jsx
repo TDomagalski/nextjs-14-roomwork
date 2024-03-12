@@ -1,4 +1,4 @@
-import styles from './navbar.module.scss';
+import styles from './footer.module.scss';
 import { MdOutlineMarkEmailRead, MdPhoneForwarded } from 'react-icons/md';
 
 export default function Footer() {
@@ -11,30 +11,25 @@ export default function Footer() {
           <span>32-090 Słomniki</span>
           <span>NIP: 682-177-77-38</span>
           <span>REGON: 381101585</span>
-          <span></span>
         </div>
         <div className={styles.btns}>
-          <div className={styles.btnMail}>
-            <a href="mailto:kwatery@roomwork.pl">
-              <MdOutlineMarkEmailRead />
-              <span>kwatery@roomwork.pl</span>
-            </a>
-          </div>
-          <div className={styles.btnPhone}>
-            <a href="tel:+48664939711">
-              <MdPhoneForwarded />
-              <span>664-939-711</span>
-            </a>
-          </div>
+          <a href="mailto:kwatery@roomwork.pl" className={styles.btnAction}>
+            <MdOutlineMarkEmailRead />
+            <span>kwatery@roomwork.pl</span>
+          </a>
+          <a href="tel:+48664939711" className={styles.btnAction}>
+            <MdPhoneForwarded />
+            <span>664-939-711</span>
+          </a>
         </div>
         <div className={styles.map}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1276.087537913689!2d20.066550950482323!3d50.232634078022706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165313b56b455b%3A0xbee57c823b9b8a2d!2sRoomWork%20-%20Kwatery%20pracownicze%20do%20wynaj%C4%99cia!5e0!3m2!1spl!2spl!4v1708123492036!5m2!1spl!2spl"
             width="400"
             height="300"
-            allowfullscreen=""
+            allowFullScreen={true}
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
