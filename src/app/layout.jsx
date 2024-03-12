@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Inter, Roboto_Mono } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import '../styles/globals.scss';
 
 import Navbar from '@/components/navbar/Navbar';
@@ -7,7 +7,7 @@ import Footer from '@/components/footer/Footer';
 import Providers from '@/components/providers/Providers';
 import ThemeSwitcher from '@/components/themeSwitcher/ThemeSwitcher';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
 export const metadata = {
   title: 'RoomWork',
@@ -22,7 +22,7 @@ RootLayout.propTypes = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <body className={inter.variable}>
+      <body className={roboto.className}>
         <Providers>
           <div className="container">
             <nav>
