@@ -7,7 +7,7 @@ import Footer from '@/components/footer/Footer';
 import Providers from '@/components/providers/Providers';
 import ThemeSwitcher from '@/components/themeSwitcher/ThemeSwitcher';
 
-const roboto = Roboto({ weight: '400', subsets: ['latin'] });
+const roboto = Roboto({ weight: ['400', '700'], subsets: ['latin'] });
 
 export const metadata = {
   title: 'RoomWork',

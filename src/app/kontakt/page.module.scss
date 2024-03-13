@@ -1,1 +1,201 @@
 @import '@/styles/variables.scss';
+
+// .container {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+
+//   .textContainer {
+//     flex-basis: $containers-width;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 2rem;
+
+//     .titleContainer {
+//       .title {
+//         font-size: 4rem;
+//         font-weight: 700;
+//       }
+//       // .subTible {}
+//     }
+//     .desc {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 1.5rem;
+
+//       .companies {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: flex-start;
+//         flex-wrap: wrap;
+
+//         .company {
+//           display: flex;
+//           flex-direction: column;
+//           align-items: flex-start;
+//           gap: 5px;
+//           font-size: 1.4rem;
+
+//           span {
+//             &.name {
+//               font-weight: 700;
+//             }
+//           }
+
+//           a {
+//             text-decoration: underline;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .formContainer {
+//     flex-basis: $containers-width;
+//     display: flex;
+//     justify-content: center;
+
+//     // .contactForm {}
+//   }
+// }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  .titleContainer {
+    text-align: center;
+    .title {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    // .subTible {}
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .desc {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .companies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1rem;
+
+        .company {
+          flex-basis: calc(50% - 5px);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+          font-size: 1.4rem;
+
+          span {
+            &.name {
+              font-weight: 700;
+            }
+          }
+
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .parag {
+        text-align: justify;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .formContainer {
+    flex-basis: $containers-width;
+    display: flex;
+    justify-content: center;
+
+    // .contactForm {}
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .container {
+    .titleContainer {
+      text-align: center;
+      .title {
+        font-size: 4rem;
+        font-weight: 700;
+      }
+      // .subTible {}
+    }
+    .textContainer {
+      .desc {
+        .companies {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          .company {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            font-size: 1.4rem;
+
+            span {
+              &.name {
+                font-weight: 700;
+              }
+            }
+
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    // .formContainer {}
+  }
+}
+
+@media (min-width: $breakpoint-xlarge) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .titleContainer {
+      flex-basis: 100%;
+      // .title {}
+      // .subTible {}
+    }
+
+    .textContainer {
+      flex-basis: 50%;
+
+      // .desc {
+      //   .companies {
+      //     .company {
+      //       span {
+      //         &.name {}
+      //       }
+      //       a {}
+      //     }
+      //   }
+      // }
+    }
+    // .formContainer {}
+  }
+}
